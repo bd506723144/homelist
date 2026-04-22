@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小言的家 · 装修清单</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Serif+SC:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F7F3EE;
+    --warm-white: #FDFAF6;
+    --ink: #1C1A17;
+    --stone: #8C8479;
+    --gold: #B8975A;
+    --gold-light: #D4B483;
+    --mist: #E8E2D9;
+    --tag-factory: #E8F0E8;
+    --tag-factory-text: #4A6741;
+    --tag-online: #E8EAF0;
+    --tag-online-text: #3D4A6A;
+    --tag-collab: #F0EBE3;
+    --tag-collab-text: #7A5A35;
+    --tag-info: #F0EDEA;
+    --tag-info-text: #6B6059;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--mist);
+    padding: 36px 24px 28px;
+    text-align: center;
+    position: relative;
+  }
+
+  .header-eyebrow {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 6vw, 36px);
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  header h1 span {
+    color: var(--gold);
+  }
+
+  .header-sub {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--stone);
+    letter-spacing: 1px;
+    line-height: 1.8;
+  }
+
+  .header-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 16px auto 0;
+  }
+
+  /* ── Tab Nav ── */
+  .tab-nav {
+    display: flex;
+    gap: 0;
+    padding: 0 20px;
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--mist);
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab-nav::-webkit-scrollbar { display: none; }
+
+  .tab-btn {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    padding: 14px 18px;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--stone);
+    cursor: pointer;
+    position: relative;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    white-space: nowrap;
+  }
+
+  .tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%; right: 50%;
+    height: 2px;
+    background: var(--gold);
+    transition: left 0.3s, right 0.3s;
+  }
+
+  .tab-btn.active {
+    color: var(--ink);
+    font-weight: 400;
+  }
+
+  .tab-btn.active::after {
+    left: 18px;
+    right: 18px;
+  }
+
+  /* ── Main ── */
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 24px 16px 120px;
+  }
+
+  .section {
+    display: none;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  .section.active { display: block; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 28px 0 16px 4px;
+  }
+
+  /* ── Card ── */
+  .card {
+    background: var(--warm-white);
+    border: 1px solid var(--mist);
+    border-radius: 2px;
+    padding: 18px 20px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.25s, border-color 0.25s;
+    position: relative;
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 20px rgba(28,26,23,0.07);
+    border-color: var(--gold-light);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .card-left { flex: 1; }
+
+  .card-name {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+  }
+
+  .card-detail {
+    font-size: 12px;
+    color: var(--stone);
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+  }
+
+  /* ── Tags ── */
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    padding: 3px 8px;
+    border-radius: 1px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .tag-factory  { background: var(--tag-factory);  color: var(--tag-factory-text); }
+  .tag-online   { background: var(--tag-online);   color: var(--tag-online-text); }
+  .tag-collab   { background: var(--tag-collab);   color: var(--tag-collab-text); }
+  .tag-info     { background: var(--tag-info);     color: var(--tag-info-text); }
+  .tag-xiaohongshu { background: #FDEEF0; color: #C45A6A; }
+
+  /* ── Action Buttons ── */
+  .card-actions {
+    margin-top: 14px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    padding: 7px 14px;
+    border-radius: 1px;
+    cursor: pointer;
+    border: 1px solid;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+  }
+
+  .btn-outline {
+    background: transparent;
+    border-color: var(--mist);
+    color: var(--stone);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* ── QR Modal ── */
+  .qr-expand {
+    display: none;
+    margin-top: 14px;
+    padding: 16px;
+    background: var(--cream);
+    border: 1px dashed var(--mist);
+    border-radius: 2px;
+    text-align: center;
+  }
+
+  .qr-expand.open { display: block; animation: fadeUp 0.3s ease; }
+
+  .qr-placeholder {
+    width: 120px;
+    height: 120px;
+    background: var(--mist);
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+  }
+
+  .qr-placeholder svg { opacity: 0.4; }
+
+  .qr-caption {
+    font-size: 11px;
+    color: var(--stone);
+    letter-spacing: 1px;
+  }
+
+  /* ── Price tag ── */
+  .price {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: var(--gold);
+    margin-top: 4px;
+  }
+
+  /* ── Bottom CTA ── */
+  .bottom-cta {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 16px 24px;
+    text-align: center;
+    z-index: 100;
+  }
+
+  .bottom-cta p {
+    font-size: 12px;
+    color: var(--stone);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+
+  .bottom-cta strong {
+    font-size: 13px;
+    color: var(--gold-light);
+    letter-spacing: 1.5px;
+    font-weight: 400;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 400px) {
+    .card { padding: 14px 15px; }
+    .card-name { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-eyebrow">Home · Collection</div>
+  <h1>小言的家 <span>·</span> 装修清单</h1>
+  <p class="header-sub">硬装 · 软装 · 小物件<br>每一件都是精挑细选</p>
+  <div class="header-divider"></div>
+</header>
+
+<nav class="tab-nav">
+  <button class="tab-btn active" onclick="switchTab('all', this)">全部</button>
+  <button class="tab-btn" onclick="switchTab('hard', this)">硬装</button>
+  <button class="tab-btn" onclick="switchTab('soft', this)">软装</button>
+  <button class="tab-btn" onclick="switchTab('small', this)">小物件</button>
+</nav>
+
+<main>
+
+  <!-- ═══ ALL ═══ -->
+  <div id="all" class="section active">
+    <div class="section-title">硬装</div>
+    <!-- cards injected by JS -->
+  </div>
+
+  <!-- ═══ HARD ═══ -->
+  <div id="hard" class="section"></div>
+
+  <!-- ═══ SOFT ═══ -->
+  <div id="soft" class="section"></div>
+
+  <!-- ═══ SMALL ═══ -->
+  <div id="small" class="section"></div>
+
+</main>
+
+<div class="bottom-cta">
+  <p>想知道这些怎么搭？</p>
+  <strong>加微信 · 定期分享完整方案</strong>
+</div>
+
+<script>
+const data = {
+  hard: [
+    {
+      name: "乳胶漆",
+      detail: "PPG大师漆 · 菱花白 · 蛋壳光工艺",
+      type: "info",
+      tagLabel: "型号参考",
+    },
+    {
+      name: "射灯",
+      detail: "西顿 · 3500K · 12W",
+      type: "info",
+      tagLabel: "型号参考",
+    },
+    {
+      name: "灯带",
+      detail: "西顿 · COB · 3500K",
+      type: "online",
+      tagLabel: "线上购买",
+      link: "https://www.taobao.com/",
+    },
+    {
+      name: "开关",
+      detail: "今闪 MESH 2.0 · 玻璃肤感",
+      type: "online",
+      tagLabel: "线上购买",
+      link: "https://www.taobao.com/",
+    },
+    {
+      name: "插座",
+      detail: "公牛 G57",
+      type: "info",
+      tagLabel: "型号参考",
+    },
+    {
+      name: "木地板",
+      detail: "大自然",
+      type: "online",
+      tagLabel: "线上购买",
+      link: "https://www.taobao.com/",
+    },
+    {
+      name: "餐厅主灯",
+      detail: "待更新",
+      type: "info",
+      tagLabel: "即将分享",
+    },
+    {
+      name: "客厅主灯",
+      detail: "待更新",
+      type: "info",
+      tagLabel: "即将分享",
+    },
+    {
+      name: "客厅柔光砖",
+      detail: "待更新",
+      type: "info",
+      tagLabel: "即将分享",
+    },
+    {
+      name: "主卫岩板",
+      detail: "待更新",
+      type: "info",
+      tagLabel: "即将分享",
+    },
+  ],
+  soft: [
+    {
+      name: "沙发",
+      detail: "3.48 米 · 竹节沙发",
+      type: "collab",
+      tagLabel: "合作优惠",
+      link: "https://www.taobao.com/",
+    },
+    {
+      name: "主卧床",
+      detail: "1.8 × 2.1 · 软包床",
+      type: "factory",
+      tagLabel: "佛山工厂",
+      hasQR: true,
+    },
+    {
+      name: "次卧床",
+      detail: "微笑床 · 1.8 × 2",
+      type: "factory",
+      tagLabel: "佛山工厂",
+      hasQR: true,
+    },
+    {
+      name: "次卧床垫",
+      detail: "栖座",
+      type: "factory",
+      tagLabel: "佛山工厂",
+      hasQR: true,
+    },
+    {
+      name: "客厅地毯",
+      detail: "3 米 × 4 米 · 赛波斯",
+      type: "factory",
+      tagLabel: "佛山工厂",
+      hasQR: true,
+    },
+    {
+      name: "餐桌",
+      detail: "2.2 米 · 白蜡木台面 / 桌腿 + 大花白台面",
+      type: "factory",
+      tagLabel: "佛山工厂",
+      price: "¥22,000",
+      hasQR: true,
+    },
+    {
+      name: "餐椅",
+      detail: "白色旋转椅",
+      type: "factory",
+      tagLabel: "佛山工厂",
+      hasQR: true,
+    },
+    {
+      name: "客厅黑色旋转休闲椅",
+      detail: "",
+      type: "collab",
+      tagLabel: "合作优惠",
+      price: "¥3,300",
+      link: "https://www.taobao.com/",
+    },
+    {
+      name: "卧室休闲椅",
+      detail: "妈妈的怀抱 · 大号",
+      type: "collab",
+      tagLabel: "合作优惠",
+      price: "¥2,300",
+      link: "https://www.taobao.com/",
+    },
+  ],
+  small: [
+    {
+      name: "磁吸案板",
+      detail: "韩国儿童馆",
+      type: "info",
+      tagLabel: "品牌参考",
+    },
+    {
+      name: "锅铲五件套",
+      detail: "ive",
+      type: "info",
+      tagLabel: "品牌参考",
+    },
+    {
+      name: "咖啡杯套装",
+      detail: "Manfen 满芬 · 中古风",
+      type: "info",
+      tagLabel: "品牌参考",
+    },
+    {
+      name: "客厅落地灯",
+      detail: "1.2 米 / 2 米 · 亚光黑 · 古名灯饰",
+      type: "info",
+      tagLabel: "品牌参考",
+    },
+    {
+      name: "次卧床头柜",
+      detail: "奶白色 · 轻奢大师家居",
+      type: "info",
+      tagLabel: "品牌参考",
+    },
+    {
+      name: "胡桃木托盘",
+      detail: "艺泽园",
+      type: "info",
+      tagLabel: "品牌参考",
+    },
+    {
+      name: "飘窗垫椅",
+      detail: "典雅铁艺家居",
+      type: "info",
+      tagLabel: "品牌参考",
+    },
+    {
+      name: "落地衣架",
+      detail: "名研优品",
+      type: "info",
+      tagLabel: "品牌参考",
+    },
+    {
+      name: "合金筷",
+      detail: "觅物家居生活",
+      type: "info",
+      tagLabel: "品牌参考",
+    },
+    {
+      name: "客厅餐厅吊灯",
+      detail: "铂阑灯堡",
+      type: "info",
+      tagLabel: "品牌参考",
+    },
+    {
+      name: "大理石牙刷架",
+      detail: "小红书橱窗有链接",
+      type: "xhs",
+      tagLabel: "小红书橱窗",
+    },
+    {
+      name: "流苏灯",
+      detail: "ACNIKOLA 家居艺术馆",
+      type: "info",
+      tagLabel: "品牌参考",
+    },
+    {
+      name: "客厅大地毯",
+      detail: "赛波斯的琥珀 · 3 × 4 米",
+      type: "xhs",
+      tagLabel: "主页橱窗搜索",
+    },
+    {
+      name: "感应灯",
+      detail: "爱斯兰灯具",
+      type: "info",
+      tagLabel: "品牌参考",
+    },
+    {
+      name: "红色蘑菇氛围灯",
+      detail: "美丽未眠",
+      type: "xhs",
+      tagLabel: "DY橱窗",
+    },
+    {
+      name: "岩块灯",
+      detail: "黛柏妮",
+      type: "info",
+      tagLabel: "品牌参考",
+    },
+    {
+      name: "石材托盘 · 香薰 · 蜡烛架",
+      detail: "主页橱窗有链接",
+      type: "xhs",
+      tagLabel: "主页橱窗",
+    },
+    {
+      name: "车载香薰",
+      detail: "图拉斯",
+      type: "info",
+      tagLabel: "品牌参考",
+    },
+    {
+      name: "木质垃圾桶",
+      detail: "DY橱窗有链接",
+      type: "xhs",
+      tagLabel: "DY橱窗",
+    },
+    {
+      name: "杯子 · 盘子 · 香槟杯",
+      detail: "mu16 云朵",
+      type: "xhs",
+      tagLabel: "主页橱窗",
+    },
+    {
+      name: "黑白色小地毯",
+      detail: "赛波斯 · 厨房地毯",
+      type: "xhs",
+      tagLabel: "主页橱窗搜索",
+    },
+  ]
+};
+
+const tagConfig = {
+  factory:  { cls: "tag-factory",  label: "佛山工厂" },
+  online:   { cls: "tag-online",   label: "线上购买" },
+  collab:   { cls: "tag-collab",   label: "合作优惠" },
+  info:     { cls: "tag-info",     label: "型号参考" },
+  xhs:      { cls: "tag-xiaohongshu", label: "橱窗链接" },
+};
+
+function buildCard(item, idx) {
+  const tc = tagConfig[item.type] || tagConfig.info;
+  const tagLabel = item.tagLabel || tc.label;
+  const id = `card-${idx}-${Math.random().toString(36).slice(2,6)}`;
+
+  let actionsHtml = '';
+  if (item.hasQR) {
+    actionsHtml = `
+      <div class="card-actions">
+        <button class="btn btn-primary" onclick="toggleQR('${id}')">查看工厂二维码</button>
+      </div>
+      <div class="qr-expand" id="${id}">
+        <div class="qr-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8C8479" stroke-width="1.5">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h1v1h-1zM17 14h1v1h-1zM14 17h1v1h-1zM17 17h3v3h-3z"/>
+          </svg>
+        </div>
+        <p class="qr-caption">工厂二维码 · 扫码直联</p>
+      </div>`;
+  } else if (item.link) {
+    const btnLabel = item.type === 'collab' ? '查看优惠链接' : '前往购买';
+    actionsHtml = `
+      <div class="card-actions">
+        <a class="btn btn-primary" href="${item.link}" target="_blank">${btnLabel}</a>
+      </div>`;
+  } else if (item.type === 'xhs') {
+    actionsHtml = `
+      <div class="card-actions">
+        <button class="btn btn-outline" onclick="alert('请前往小言主页橱窗查找')">主页橱窗查找</button>
+      </div>`;
+  }
+
+  return `
+    <div class="card">
+      <div class="card-header">
+        <div class="card-left">
+          <div class="card-name">${item.name}</div>
+          ${item.detail ? `<div class="card-detail">${item.detail}</div>` : ''}
+          ${item.price ? `<div class="price">${item.price}</div>` : ''}
+        </div>
+        <span class="tag ${tc.cls}">${tagLabel}</span>
+      </div>
+      ${actionsHtml}
+    </div>`;
+}
+
+function buildSection(container, categories) {
+  let html = '';
+  categories.forEach(cat => {
+    const labels = { hard: '硬装', soft: '软装', small: '小物件' };
+    html += `<div class="section-title">${labels[cat]}</div>`;
+    data[cat].forEach((item, i) => { html += buildCard(item, `${cat}-${i}`); });
+  });
+  container.innerHTML = html;
+}
+
+// Build all sections
+buildSection(document.getElementById('all'), ['hard', 'soft', 'small']);
+buildSection(document.getElementById('hard'), ['hard']);
+buildSection(document.getElementById('soft'), ['soft']);
+buildSection(document.getElementById('small'), ['small']);
+
+function switchTab(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+function toggleQR(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+}
+</script>
+</body>
+</html>
