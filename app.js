@@ -81,7 +81,7 @@ function buildCard(item, idx) {
 
 function buildSection(container, categories) {
   let html = '';
-  const labels = { hard: '硬装', soft: '软装', small: '小物件', aroll: '一镜到底' };
+  const labels = { hard: '硬装', soft: '软装', small: '小物件', lights: '全屋灯具', aroll: '一镜到底' };
   categories.forEach(cat => {
     html += `<div class="section-title">${labels[cat]}</div>`;
     data[cat].forEach((item, i) => { html += buildCard(item, `${cat}-${i}`); });
@@ -89,11 +89,12 @@ function buildSection(container, categories) {
   container.innerHTML = html;
 }
 
-buildSection(document.getElementById('all'),   ['hard', 'soft', 'small', 'aroll']);
-buildSection(document.getElementById('hard'),  ['hard']);
-buildSection(document.getElementById('soft'),  ['soft']);
-buildSection(document.getElementById('small'), ['small']);
-buildSection(document.getElementById('aroll'), ['aroll']);
+buildSection(document.getElementById('all'),    ['hard', 'soft', 'small', 'lights', 'aroll']);
+buildSection(document.getElementById('hard'),   ['hard']);
+buildSection(document.getElementById('soft'),   ['soft']);
+buildSection(document.getElementById('small'),  ['small']);
+buildSection(document.getElementById('lights'), ['lights']);
+buildSection(document.getElementById('aroll'),  ['aroll']);
 
 function switchTab(id, btn) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));

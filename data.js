@@ -88,6 +88,15 @@ const data = {
     { name: "杯子 · 盘子 · 香槟杯", detail: "mu16 云朵", type: "xhs", tagLabel: "小红书橱窗" },
     { name: "黑白色小地毯", detail: "赛波斯 · 厨房地毯", type: "xhs", tagLabel: "小红书橱窗" },
   ],
+  /* ── 全屋灯具 ── */
+  lights: [
+    { name: "壁灯", detail: "给客服报小言拿85折券", type: "online", link: "https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3816286110942888090&origin_type=604", img: "https://p26-item.ecombdimg.com/img/ecom-shop-material/jpeg_m_881a888f84ce5085ab6372210ead3465_sx_448654_www1440-1440~tplv-5mmsx3fupr-resize_q:1080:1080:q90.webp" },
+    { name: "餐厅水晶灯", detail: "给客服报小言拿85折券", type: "online", link: "https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3816289220381769932&origin_type=604", img: "https://p3-item.ecombdimg.com/img/ecom-shop-material/jpeg_m_d278a619843e15f6c469bf363023495a_sx_381438_www1440-1440~tplv-5mmsx3fupr-resize_q:1080:1080:q90.webp" },
+    { name: "客厅水晶灯", detail: "给客服报小言拿85折券", type: "online", link: "https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3816291063015014456&origin_type=604" },
+    { name: "石头小吊灯", detail: "给客服报小言拿85折券", type: "online", link: "https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3816290618477510738&origin_type=604", img: "https://p3-item.ecombdimg.com/img/ecom-shop-material/jpeg_m_9bbaa8b573077595802d94fcb3a1b024_sx_196353_www1440-1440~tplv-5mmsx3fupr-resize_q:1080:1080:q90.webp" },
+    { name: "熔岩吊灯", detail: "给客服报小言拿85折券", type: "online", link: "https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3816291325008019546&origin_type=604", img: "https://p26-item.ecombdimg.com/img/ecom-shop-material/jpeg_m_996bb191c99971dbca661d0937b2e85a_sx_260928_www1440-1440~tplv-5mmsx3fupr-resize_q:1080:1080:q90.webp" },
+  ],
+
   /* ── 一镜到底 ── */
   aroll: [
     { name: "全屋一镜RoomTour", detail: "纯享版", type: "video", link: "https://v.douyin.com/LNnRJIspOrc/" },
