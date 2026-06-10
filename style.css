@@ -159,6 +159,33 @@ main {
   }
 }
 
+.vr-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  padding: 9px 22px;
+  border: 1px solid var(--gold);
+  border-radius: 2px;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-decoration: none;
+  transition: all 0.25s;
+}
+
+.vr-btn::before {
+  content: '⬡';
+  font-size: 13px;
+}
+
+.vr-btn:hover {
+  background: var(--gold);
+  color: white;
+}
+
 .section-title {
   font-family: 'Playfair Display', serif;
   font-size: 11px;
