@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ee">
+  <title>晚读书架</title>
+  <style>
+    :root{color-scheme:light;background:#f7f4ee;color:#292722;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+    *{box-sizing:border-box}body{margin:0}button{font:inherit}header{border-bottom:1px solid #e7e1d5;background:#f7f4ee;position:sticky;top:0;z-index:2}
+    .bar{max-width:760px;margin:auto;padding:18px 20px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:Georgia,"Songti SC",serif;font-size:23px;letter-spacing:.12em}.tag{font-size:11px;color:#8e887e;letter-spacing:.13em}
+    main{max-width:760px;margin:auto;padding:30px 20px 80px}.eyebrow{font-size:12px;letter-spacing:.15em;color:#9b8164}
+    h1{font-family:Georgia,"Songti SC",serif;font-weight:500;font-size:34px;margin:10px 0 24px}.count{font-size:13px;color:#9a948b;margin-bottom:18px}
+    .row{display:block;width:100%;text-align:left;border:0;border-top:1px solid #e4ddd1;background:none;padding:22px 3px;cursor:pointer;color:inherit}
+    .row:last-child{border-bottom:1px solid #e4ddd1}.row:hover{background:#f1ece3}.row-title{font-size:20px;font-family:Georgia,"Songti SC",serif;line-height:1.5}
+    .row-meta{color:#918b81;font-size:12px;margin-top:7px}.back{border:0;background:none;color:#806950;padding:0;margin:0 0 25px;cursor:pointer}
+    .article-meta{color:#8e887e;font-size:13px;margin-top:-10px;margin-bottom:35px}.article{font-family:Georgia,"Songti SC",serif;font-size:18px;line-height:2.05;overflow-wrap:anywhere}
+    .article h1{font-size:27px;margin:40px 0 15px}.article h2{font-size:23px;font-weight:500;margin:38px 0 12px}.article h3{font-size:20px;font-weight:500;margin:30px 0 10px}
+    .article p{margin:0 0 19px;white-space:pre-wrap}.article blockquote{border-left:2px solid #ad9880;margin:16px 0 24px;padding-left:18px;color:#615748}.article hr{border:0;border-top:1px solid #e1d9cc;margin:38px 0}
+    .article ul,.article ol{padding-left:1.5em}.article li{margin:8px 0}.article strong{font-weight:650}.article code{font-size:.9em;background:#eee7dc;padding:2px 4px}
+    .notice{color:#8b4c3f;font-size:14px;padding:20px 0}.hidden{display:none}@media(max-width:600px){main{padding-top:26px}.article{font-size:17px}h1{font-size:30px}}
+  </style>
+</head>
+<body>
+  <header><div class="bar"><div class="brand">晚读</div><div class="tag">EVENING READS</div></div></header>
+  <main><div id="shelf"><div class="eyebrow">阅读历史</div><h1>我的书架</h1><div id="count" class="count"></div><div id="list"></div></div>
+  <div id="detail" class="hidden"><button id="back" class="back">← 返回书架</button><div class="eyebrow">每日一本书</div><h1 id="title"></h1><div id="meta" class="article-meta"></div><div id="article" class="article"></div></div></main>
+  <script>
+    const shelf=document.getElementById('shelf'),detail=document.getElementById('detail'),list=document.getElementById('list');
+    let books=[];
+    const escapeHTML=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const inline=s=>escapeHTML(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/`([^`]+)`/g,'<code>$1</code>');
+    function markdown(text){
+      const lines=text.split('\n'),out=[];let paragraph=[],quote=[],items=[],ordered=false;
+      function flush(){if(paragraph.length){out.push('<p>'+inline(paragraph.join('\n'))+'</p>');paragraph=[]}if(quote.length){out.push('<blockquote>'+inline(quote.join('\n'))+'</blockquote>');quote=[]}if(items.length){out.push('<'+(ordered?'ol':'ul')+'>'+items.map(x=>'<li>'+inline(x)+'</li>').join('')+'</'+(ordered?'ol':'ul')+'>');items=[]}}
+      for(const line of lines){const t=line.trim();if(!t){flush();continue}if(/^#{1,3} /.test(t)){flush();const n=t.match(/^#+/)[0].length;out.push('<h'+n+'>'+inline(t.slice(n+1))+'</h'+n+'>');continue}if(t==='---'){flush();out.push('<hr>');continue}if(t.startsWith('> ')){if(paragraph.length||items.length)flush();quote.push(t.slice(2));continue}const m=t.match(/^([-*]|\d+\.)\s+(.+)$/);if(m){if(paragraph.length||quote.length)flush();const nextOrdered=m[1].endsWith('.');if(items.length&&ordered!==nextOrdered)flush();ordered=nextOrdered;items.push(m[2]);continue}if(quote.length||items.length)flush();paragraph.push(line)}flush();return out.join('');
+    }
+    function showShelf(){detail.classList.add('hidden');shelf.classList.remove('hidden');history.replaceState(null,'',location.pathname);window.scrollTo(0,0)}
+    async function showBook(i){const b=books[i];if(!b)return;shelf.classList.add('hidden');detail.classList.remove('hidden');document.getElementById('title').textContent=b.title;document.getElementById('meta').textContent=[b.author,b.date,b.category].filter(Boolean).join(' · ');document.getElementById('article').textContent='正在打开…';history.replaceState(null,'','#book-'+i);window.scrollTo(0,0);try{const r=await fetch(b.file);if(!r.ok)throw Error(r.status);document.getElementById('article').innerHTML=markdown(await r.text())}catch{document.getElementById('article').innerHTML='<div class="notice">文章读取失败，请刷新页面重试。</div>'}}
+    document.getElementById('back').onclick=showShelf;
+    async function start(){try{const r=await fetch('books.json');if(!r.ok)throw Error(r.status);books=await r.json();books.sort((a,b)=>(b.date||'').localeCompare(a.date||''));document.getElementById('count').textContent=books.length+' 本书';books.forEach((b,i)=>{const button=document.createElement('button');button.className='row';button.innerHTML='<div class="row-title">'+escapeHTML(b.title)+'</div><div class="row-meta">'+escapeHTML([b.author,b.date,b.category].filter(Boolean).join(' · '))+'</div>';button.onclick=()=>showBook(i);list.append(button)});const match=location.hash.match(/^#book-(\d+)$/);if(match)showBook(Number(match[1]))}catch{list.innerHTML='<div class="notice">书架读取失败，请刷新页面重试。</div>'}}start();
+  </script>
+</body>
+</html>
