@@ -1,0 +1,200 @@
+[
+  {
+    "title": "有限与无限的游戏",
+    "author": "詹姆斯·卡斯",
+    "category": "哲学",
+    "date": "2026-09-01",
+    "heading": "每日一本书 · Day 1",
+    "source": "conversation: 61b576c8-9fd0-48e7-9a62-bb394d03892f",
+    "file": "articles/01.md",
+    "sha256": "d223c6b511a3d8c3f41293482731a9364ef1a529d64db624c02bf662dc80f41f",
+    "characters": 12453
+  },
+  {
+    "title": "设计心理学",
+    "author": "唐纳德·诺曼",
+    "category": "设计",
+    "date": "2026-09-02",
+    "heading": "每日一本书 · Day 2",
+    "source": "saved migration: 202609120001_import_dialogue_articles.sql",
+    "file": "articles/02.md",
+    "sha256": "ff3ab509e3b380fcf65c02ae4e9b603b424628714173e5a23f3a0b72deac47d4",
+    "characters": 6818
+  },
+  {
+    "title": "正义之心",
+    "author": "乔纳森·海特",
+    "category": "心理学",
+    "date": "2026-09-03",
+    "heading": "每日一本书 · Day 3",
+    "source": "saved migration: 202609120001_import_dialogue_articles.sql",
+    "file": "articles/03.md",
+    "sha256": "8375c319f933bf5bd6a1d4e629c896011817590f74da4dbd497302fda9e5ba4d",
+    "characters": 6841
+  },
+  {
+    "title": "伊凡·伊里奇之死",
+    "author": "列夫·托尔斯泰",
+    "category": "文学",
+    "date": "2026-09-04",
+    "heading": "每日一本书 · Day 4",
+    "source": "saved migration: 202609120001_import_dialogue_articles.sql",
+    "file": "articles/04.md",
+    "sha256": "57a65b68cc51c265c99078eea8d88f1a448aba70bb2f04a294d8eff19ba0087b",
+    "characters": 8948
+  },
+  {
+    "title": "看得见的与看不见的",
+    "author": "弗雷德里克·巴斯夏",
+    "category": "经济学",
+    "date": "2026-09-05",
+    "heading": "每日一本书 · Day 5",
+    "source": "saved migration: 202609120001_import_dialogue_articles.sql",
+    "file": "articles/05.md",
+    "sha256": "23423d26daa62fc7a145c154285b8b31a5b0ebd3e1d0a836bea2f1eedb0f603f",
+    "characters": 8172
+  },
+  {
+    "title": "枪炮、病菌与钢铁",
+    "author": "贾雷德·戴蒙德",
+    "category": "历史",
+    "date": "2026-09-07",
+    "heading": "每日一本书 · Day 6",
+    "source": "saved migration: 202609120001_import_dialogue_articles.sql",
+    "file": "articles/06.md",
+    "sha256": "27cfb69f48878027d8fc0d89302faf4274a57db7e6c3d3d23787b6110c99aab2",
+    "characters": 9727
+  },
+  {
+    "title": "禅与摩托车维修艺术",
+    "author": "罗伯特·M·波西格",
+    "category": "哲学",
+    "date": "2026-09-13",
+    "heading": "# 每日一本书 · 今天",
+    "source": "saved migration: 202609250001_sync_dialogue_articles.sql",
+    "file": "articles/07.md",
+    "sha256": "a0b646907554547527e51291ecc2999b053dc1f3c502267671dcfbbcafee29cc",
+    "characters": 12365
+  },
+  {
+    "title": "反脆弱",
+    "author": "纳西姆·尼古拉斯·塔勒布",
+    "category": "决策",
+    "date": "2026-09-14",
+    "heading": "# 每日一本书 · 今天",
+    "source": "conversation: f99ba661-0a83-4fba-a87f-b70f093303c2",
+    "file": "articles/08.md",
+    "sha256": "ac6fa0dd407e29a49adfc13defe17cf5aee7211315e61cc2613a5ab29f4ab6ba",
+    "characters": 14767
+  },
+  {
+    "title": "穷查理宝典",
+    "author": "查理·芒格",
+    "category": "商业",
+    "date": "2026-09-15",
+    "heading": "# 每日一本书 · 今天",
+    "source": "conversation: f1854e32-22a7-4ba3-9222-b6b18c7471b8",
+    "file": "articles/09.md",
+    "sha256": "061130d6ee7aaba3cd294cce654822aa63f486c9bbd342dfe486181006aafad5",
+    "characters": 14404
+  },
+  {
+    "title": "金钱心理学",
+    "author": "摩根·豪泽尔",
+    "category": "财富",
+    "date": "2026-09-16",
+    "heading": "# 每日一本书 · 今天",
+    "source": "saved migration: 202609250001_sync_dialogue_articles.sql",
+    "file": "articles/10.md",
+    "sha256": "7f7fc7327e86f5741400b8375842e62493d57a94245b11c9bdd306768c29903d",
+    "characters": 12143
+  },
+  {
+    "title": "随机漫步的傻瓜",
+    "author": "纳西姆·尼古拉斯·塔勒布",
+    "category": "决策",
+    "date": "2026-09-17",
+    "heading": "# 每日一本书 · 今天",
+    "source": "saved migration: 202609250001_sync_dialogue_articles.sql",
+    "file": "articles/11.md",
+    "sha256": "9818f24b24dba9371124c4c6372dc48190b4f6eb47ca890af98904189bdc8f25",
+    "characters": 12146
+  },
+  {
+    "title": "置身事内：中国政府与经济发展",
+    "author": "",
+    "category": "",
+    "date": "",
+    "heading": "# 每日一本书 · 今天",
+    "source": "conversation: 6501ed16-560d-4cea-b059-280bd9509b8f",
+    "file": "articles/12.md",
+    "sha256": "dee4fb28cd68f64b9393331720f157e66c259eb39c9f0c44e1f0a2f04a1be348",
+    "characters": 11899
+  },
+  {
+    "title": "思考，快与慢",
+    "author": "",
+    "category": "",
+    "date": "",
+    "heading": "# 每日一本书 · 今天",
+    "source": "conversation: 830a64f4-2176-4ede-940c-930da3efb691",
+    "file": "articles/13.md",
+    "sha256": "797ef47cddc466a0dea2c52145767170105377e2937704379a1f7da41cb76f73",
+    "characters": 13747
+  },
+  {
+    "title": "乌合之众：大众心理研究",
+    "author": "",
+    "category": "",
+    "date": "",
+    "heading": "# 每日一本书 · 今天",
+    "source": "conversation: cf5feda0-a85b-43f4-88ed-1db630425d3a",
+    "file": "articles/14.md",
+    "sha256": "4b2365a1cb9242b58f27475ff5960cfca1faead001ed1754345a26313a370979",
+    "characters": 12609
+  },
+  {
+    "title": "人类简史：从动物到上帝",
+    "author": "",
+    "category": "",
+    "date": "",
+    "heading": "# 每日一本书 · 今天",
+    "source": "conversation: 9a700072-195e-42ba-b161-e6189f2f876b",
+    "file": "articles/15.md",
+    "sha256": "9880c391cc5b3650f2124b3f679fb1031ddb3fb407387d170aa62d54d5d9ce9f",
+    "characters": 14361
+  },
+  {
+    "title": "影响力",
+    "author": "",
+    "category": "",
+    "date": "",
+    "heading": "# 每日一本书 · 今天",
+    "source": "conversation: 01d61bd5-019f-4fe5-96b2-b9c7d698d9b6",
+    "file": "articles/16.md",
+    "sha256": "bd439e6df3b79f01a19bfca54f289439190af35e24f476a415e564212b617dd0",
+    "characters": 13472
+  },
+  {
+    "title": "活着",
+    "author": "",
+    "category": "",
+    "date": "",
+    "heading": "# 每日一本书 · 今天",
+    "source": "conversation: 7bb300fa-a05b-4c0f-a17f-a8d88b3f7f4f",
+    "file": "articles/17.md",
+    "sha256": "660271fde9be46b971ab0f8eaac1c2413c8c7ac376a7cbd07ae8f9d29b50e288",
+    "characters": 13570
+  },
+  {
+    "title": "斯通纳",
+    "author": "",
+    "category": "",
+    "date": "",
+    "heading": "# 每日一本书 · 今天",
+    "source": "conversation: dccc735b-4434-48c1-8dbb-7f4273e6a3e5",
+    "file": "articles/18.md",
+    "sha256": "66ccb211f531c641fb93a7cc1e2e6f75f0a27dfb43b999dcd0d766d3862dd332",
+    "characters": 13671
+  }
+]
