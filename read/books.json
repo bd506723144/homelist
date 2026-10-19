@@ -229,5 +229,27 @@
     "file": "articles/21.md",
     "sha256": "827ff2d9f5c930927a0d1632842afed26c988ea0f2a8df3c454b47d820826b28",
     "characters": 18137
+  },
+  {
+    "title": "国家的视角",
+    "author": "詹姆斯·C·斯科特",
+    "category": "政治学",
+    "date": "2026-10-14",
+    "heading": "每日一本书 · 2026年10月14日",
+    "source": "conversation: a9518296-b768-46af-b0f3-a87c77cf2366",
+    "file": "articles/22.md",
+    "sha256": "86abe5543deba1798816baac58483d5481efb68469b19bfce98a9c0050712ade",
+    "characters": 13589
+  },
+  {
+    "title": "时间的秩序",
+    "author": "卡洛·罗韦利",
+    "category": "物理学",
+    "date": "2026-10-15",
+    "heading": "每日一本书 · 2026年10月15日",
+    "source": "conversation: 1fa8f59a-d33d-4d69-bf70-00f25adb0879",
+    "file": "articles/23.md",
+    "sha256": "36eb81834e61d95f8ffe4be6f1d797819787008d7d5f514bdbed66467f16a8b4",
+    "characters": 10271
   }
 ]
