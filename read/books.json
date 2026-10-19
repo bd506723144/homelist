@@ -196,5 +196,38 @@
     "file": "articles/18.md",
     "sha256": "66ccb211f531c641fb93a7cc1e2e6f75f0a27dfb43b999dcd0d766d3862dd332",
     "characters": 13671
+  },
+  {
+    "title": "观看之道",
+    "author": "约翰·伯格",
+    "category": "艺术",
+    "date": "2026-10-09",
+    "heading": "每日一本书 · 2026年10月9日",
+    "source": "conversation: 4bb12076-1082-47ef-bf2d-f0b21589b47b",
+    "file": "articles/19.md",
+    "sha256": "1594d3a2cd0205da5fe64f1a3b04c01b712cc017113fef9dfdac2be8c8bbf5e1",
+    "characters": 17026
+  },
+  {
+    "title": "复杂",
+    "author": "梅拉妮·米歇尔",
+    "category": "科学",
+    "date": "2026-10-10",
+    "heading": "每日一本书 · 2026年10月10日",
+    "source": "conversation: 079e1dd5-b854-4c4a-b9e9-d7d0666cc3a1",
+    "file": "articles/20.md",
+    "sha256": "27022b9bf04ead608fd6e1a8c8cdb87d1fcaf2ec6e8d0acdb36fddc2b3108863",
+    "characters": 17864
+  },
+  {
+    "title": "看不见的城市",
+    "author": "伊塔洛·卡尔维诺",
+    "category": "文学",
+    "date": "2026-10-11",
+    "heading": "每日一本书 · 2026年10月11日",
+    "source": "conversation: 9b03d9af-a8ff-49ec-988e-3926f08af1bd",
+    "file": "articles/21.md",
+    "sha256": "827ff2d9f5c930927a0d1632842afed26c988ea0f2a8df3c454b47d820826b28",
+    "characters": 18137
   }
 ]
