@@ -251,5 +251,38 @@
     "file": "articles/23.md",
     "sha256": "36eb81834e61d95f8ffe4be6f1d797819787008d7d5f514bdbed66467f16a8b4",
     "characters": 10271
+  },
+  {
+    "title": "献给阿尔吉侬的花束",
+    "author": "丹尼尔·凯斯",
+    "category": "文学",
+    "date": "2026-10-20",
+    "heading": "# 每日一本书 · 2026年10月20日",
+    "source": "conversation: 6acd74c8-12d8-83e9-ae9d-90353ef2a86e",
+    "file": "articles/24.md",
+    "sha256": "ca5f772f6e983ba5ee46f24810eda7eb3afa5b51db9969311f364d8f4f6197bf",
+    "characters": 13836
+  },
+  {
+    "title": "规模",
+    "author": "杰弗里·韦斯特",
+    "category": "复杂系统",
+    "date": "2026-10-21",
+    "heading": "# 每日一本书｜2026年10月21日",
+    "source": "conversation: 6acd74c8-12d8-83e9-ae9d-90353ef2a86e",
+    "file": "articles/25.md",
+    "sha256": "4b2c7e6fbda9c42ab6450d3ae1eb02a5ab5058ee39df2740a738655c47c354d5",
+    "characters": 14679
+  },
+  {
+    "title": "你一生的故事",
+    "author": "特德·姜",
+    "category": "文学",
+    "date": "2026-10-22",
+    "heading": "# 每日一本书｜2026年10月22日",
+    "source": "conversation: 6acd74c8-12d8-83e9-ae9d-90353ef2a86e",
+    "file": "articles/26.md",
+    "sha256": "45159359a8bebdbf7da321ec97652710686eaa2e4c9ed21bce970e0952f68479",
+    "characters": 14734
   }
 ]
