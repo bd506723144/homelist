@@ -339,5 +339,38 @@
     "file": "articles/31.md",
     "sha256": "f76cefb88dfb87e9d5e031cfc87788127209f209635030d7bfb7c62cd1ad0100",
     "characters": 15784
+  },
+  {
+    "title": "人类成功的秘密",
+    "author": "约瑟夫·亨里奇",
+    "category": "演化生物学 × 文化人类学 × 认知科学 × 商业创新 × 人工智能",
+    "date": "2026-10-24",
+    "heading": "每日一本书｜2026年10月24日",
+    "source": "user-provided export: 新建 文本文档.txt",
+    "file": "articles/32.md",
+    "sha256": "b63b77e090e97e2a57360f7031cdf9e1422e122dca1f29f4340f69edbcd72ca7",
+    "characters": 20844
+  },
+  {
+    "title": "无穷的开始",
+    "author": "戴维·多伊奇（David Deutsch）",
+    "category": "科学哲学 × 认知科学 × 人类文明 × 人工智能 × 创造力",
+    "date": "2026-10-27",
+    "heading": "每日一本书｜2026年10月27日",
+    "source": "user-provided export: 新建 文本文档.txt",
+    "file": "articles/33.md",
+    "sha256": "61f3bd7a9bbe527f3601aa38e28259889ddfadb2a54e907409bab2e8dc65472b",
+    "characters": 21827
+  },
+  {
+    "title": "克拉拉与太阳",
+    "author": "石黑一雄（Kazuo Ishiguro）",
+    "category": "文学 × 人工智能 × 心理学 × 社会阶层 × 生命哲学",
+    "date": "2026-10-31",
+    "heading": "每日一本书｜2026年10月31日",
+    "source": "user-provided export: 新建 文本文档.txt",
+    "file": "articles/34.md",
+    "sha256": "9222e3bccb40f6de1908d80786bb1ae95a22675cf4d4cff64755879585a5ae49",
+    "characters": 22103
   }
 ]
