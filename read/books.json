@@ -372,5 +372,49 @@
     "file": "articles/34.md",
     "sha256": "c5e71f38b1758dbd8f4e6e5dfa0f87199fbdb97ddce54e9a74f423c8323f1bd7",
     "characters": 22108
+  },
+  {
+    "title": "大转型",
+    "author": "卡尔·波兰尼",
+    "category": "经济学 × 社会学 × 历史 × 政治哲学 × 商业文明",
+    "date": "2026-11-04",
+    "heading": "# 每日一本书｜2026年11月4日",
+    "source": "conversation: 6acd74c8-12d8-83e9-ae9d-90353ef2a86e",
+    "file": "articles/35.md",
+    "sha256": "2f796957d63f8b39f2cad3cd9b217276753e4dd09d91fd1f48589017225e4ce3",
+    "characters": 18075
+  },
+  {
+    "title": "心智社会",
+    "author": "马文·明斯基",
+    "category": "认知科学 × 人工智能 × 进化心理学 × 哲学 × 社会学",
+    "date": "2026-11-05",
+    "heading": "# 每日一本书｜2026年11月5日",
+    "source": "conversation: 6acd74c8-12d8-83e9-ae9d-90353ef2a86e",
+    "file": "articles/36.md",
+    "sha256": "ccbdb8c7b23a9ced47e8c3cd5f4ea376e4b27e591f5505c41d15d3638b075606",
+    "characters": 18135
+  },
+  {
+    "title": "逃避自由",
+    "author": "埃里希·弗洛姆",
+    "category": "经济学 × 社会学 × 历史 × 商业 × 人类行为",
+    "date": "2026-11-07",
+    "heading": "# 每日一本书｜2026年11月7日",
+    "source": "conversation: 6acd74c8-12d8-83e9-ae9d-90353ef2a86e",
+    "file": "articles/37.md",
+    "sha256": "4b9099fda6accc0a067c2deb3199dc691414ca536a78a1d47674c7820a322817",
+    "characters": 15179
+  },
+  {
+    "title": "自私的基因",
+    "author": "理查德·道金斯",
+    "category": "生物学 × 进化论 × 哲学 × 人类行为",
+    "date": "2026-11-09",
+    "heading": "# 每日一本书｜2026年11月9日",
+    "source": "conversation: 6acd74c8-12d8-83e9-ae9d-90353ef2a86e",
+    "file": "articles/38.md",
+    "sha256": "3032f89c39d71dbc693413480aae8e63f6b62c820ec40c810f12dd5f0e90cfed",
+    "characters": 15150
   }
 ]
